@@ -35,7 +35,7 @@ app.use((error, req, res, next) => {
 
 mongoose
   .connect(
-    "mongodb+srv://diyans:sd.281506@sd-281506-engm4.mongodb.net/mern?retryWrites=true&w=majority"
+    process.env.MONGO_URL
   )
   .then(() => {
     app.listen(5000);
